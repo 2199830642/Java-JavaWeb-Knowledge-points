@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件</title>
+    <script>
+        //2.加载事件
+        window.onload=function () {
+            /*//1.失去焦点事件
+            document.getElementById("username").onblur=function () {
+                alert("失去焦点了")
+            };
+            //3.绑定鼠标事件
+            document.getElementById("username").onmouseover=function () {
+                alert("鼠标来了")
+            }*/
+            //3.绑定鼠标按下事件，并获取按下的是哪个键，0是左键，1是滚轮，2是右键
+            document.getElementById("username").onmousedown=function (event) {
+                alert(event.button)
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="username">
+</body>
+</html>

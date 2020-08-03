@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+</head>
+<body>
+<img id="star" src="../../images/icon_5.jpg">
+<script>
+    /*
+    1.获取图片对象
+    2.绑定单击事件
+    3.每次点击切换图片
+     */
+    //1.获取图片对象
+    var star = document.getElementById("star");
+    //代表是第一个图片
+    var flag = false;
+    star.onclick=function () {
+        if(flag){//如果是第二个图片，那就换成第一个图片
+            star.src="../../images/icon_5.jpg";
+            flag=false;
+        }else{
+            star.src="../../images/icon_2.jpg";
+            flag=true;
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node对象</title>
+    <style>
+        div{
+            border: 1px hotpink solid;
+        }
+        #div1{
+            width: 500px;
+        }
+        #div2{
+            width: 50px;
+        }
+        #div3{
+            width: 50px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+        <div id="div1">
+            div1
+            <div id="div2">
+                div2
+            </div>
+        </div>
+        <a id="del" href="javascript:void(0)">删除子节点</a>
+        <a id="add" href="javascript:void(0)">添加子节点</a>
+<!--        <input id="del" type="button" value="删除子节点">-->
+<script>
+        //删除子节点
+        var del = document.getElementById("del");
+        del.onclick=function () {
+            var div1 = document.getElementById("div1");
+            var div2 = document.getElementById("div2");
+            div1.removeChild(div2);
+        }
+        //添加子节点
+        var add = document.getElementById("add");
+        add.onclick=function () {
+            var div1 = document.getElementById("div1");
+            //给div1添加子节点
+            var div3 = document.createElement("div");
+            div3.setAttribute("id","div3");
+            div1.appendChild(div3);
+        }
+        //获取父节点
+    var div2 = document.getElementById("div2");
+        var parentNode = div2.parentNode;
+        alert(parentNode);
+</script>
+</body>
+</html>

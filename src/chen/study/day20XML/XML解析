@@ -1,0 +1,87 @@
+
+    XML解析：操作XML文档，将文档中的数据读取到内存中
+
+        操作XML文档：
+            1.解析（读取）：将文档中的数据保存到内存中
+            2.写入：将内存中的数据保存到XML文档中.持久化的存储
+
+        解析的方式:
+            1.DOM思想：将标记语言文档一次性加载进内存，然后在内存会形成一个DOM树
+                优点：操作方便，可以对文档进行CRUO的所有操作
+                缺点：占内存
+                常用于服务器端
+
+            2.SAX思想：逐行读取，基于事件驱动的
+                优点：基本不占内存
+                缺点：只能读取，不能增删改
+                常用于安卓手机
+
+        XML常见的解析器：
+            1.JAXP：sun公司提供的解析器，支持DOM和SAX两种思想
+            2.DOM4J：一款非常优秀的解析器，基于DOM思想
+            3.Jsoup：jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。
+                     它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。
+            4.PULL：Android操作系统内置的解析器，基于SAX思想
+
+        Jsoup快速入门：
+            使用步骤：
+                        1.导入jar包
+                        2.获取一个Document对象
+                        3.获取对应的标签Element对象
+                        4.获取数据
+            代码：
+                        //获取Document对象，根据XML文档来获取
+                        //获取student.xml的路径
+                        String path = Demo01Jsoup.class.getClassLoader().getResource("student.xml").toURI.getPath();
+                        //解析xml文档，加载文档进内存，获取dom树
+                        Document document = Jsoup.parse(new File(path), "utf-8");
+                        //获取元素对象
+                        Elements name = document.getElementsByTag("name");
+                        System.out.println(name.size());//2
+                        //获取第一个name的Element对象
+                        Element element = name.get(0);
+                        //获取数据
+                        String na = element.text();
+                        System.out.println(na);//tom
+
+        对象的使用：
+            Jsoup：工具类，可以解析html或xml对象，返回Document
+                parse:解析html或xml文档,返回Document
+                    重载的几个常用方法：
+                            parse(File in,String charsetName);解析xml或html文件的
+                            parse(String str);解析xml或html字符串
+                            parse(URL url,int timeoutMills):通过网络路径获取指定的html或xml文档
+
+            Document：文档对象，代表DOM树
+                主要获取element对象
+                    getElementById(String id);根据id属性值来获取唯一的Element对象
+                    getElementsByTag(String TagName);根据标签名称获取元素对象集合
+                    getElementsByAttribute(String key);根据属性名称获取元素对象集合
+                    getElementsByAttributeValue(String key,String value);根据属性名称和属性值获取元素对象集
+
+            Elements：元素Element对象的集合，可以当做一个ArrayList<Element>集合来使用
+
+            Element:元素对象
+                1.获取子元素对象
+                    getElementById(String id);根据id属性值来获取唯一的Element对象
+                    getElementsByTag(String TagName);根据标签名称获取元素对象集合
+                    getElementsByAttribute(String key);根据属性名称获取元素对象集合
+                    getElementsByAttributeValue(String key,String value);根据属性名称和属性值获取元素对象集
+
+                2.获取属性值
+                    String attr(String key):根据属性名称获取属性名
+                3.获取文本内容
+                    String text(); 获取文本内容
+                    String html(); 获取标签体的所有内容 包括子标签的一个字符串内容
+
+            Node：节点对象
+                是document和Element的父类
+
+        快捷的查询方式：
+            1.selector：选择器
+                使用的方法：Elements select(String cssQuery);
+                    语法：参开selector类中定义的语法
+
+            2.XPath：XPath即为XML路径语言（XML Path Language），它是一种用来确定XML文档中某部分位置的语言。
+                使用Jsoup的XPath需要额外带入jar包
+                通过w3cschool参考手册，使用XPath语法进行查询

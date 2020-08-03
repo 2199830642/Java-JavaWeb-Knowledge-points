@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+    <style>
+        td{
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        //创建一个表格
+        document.write("<table align='center'>");
+        for (var i = 1; i <= 9; i++) {
+            //外层循环每循环一次就是一行
+            document.write("<tr>");
+            for (var j = 1; j <= i; j++) {
+                //内存循环每循环一次就是一个表格
+                document.write("<td>");
+                document.write(i + "*" + j + "=" + (i * j) + "&nbsp;&nbsp;&nbsp;");
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

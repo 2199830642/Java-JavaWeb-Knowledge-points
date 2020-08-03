@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>小陈旅游网</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery（Bootstrap的JavaScript插件所必需的） -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .padding{
+            padding-top: 10px;
+        }
+        .search_input{
+            float: left;
+            border: 2px solid #ffc900;
+            width: 400px;
+            height: 35px;
+            padding-left: 10px;
+            margin-top: 11px;
+        }
+        .search_btn{
+            float: left;
+            border: 1px solid #ffc900;
+            width: 90px;
+            height: 35px;
+            background-color: #ffc900;
+            text-align: center;
+            line-height: 35px;
+            margin-top: 11px;
+        }
+        .jx{
+            border-bottom: 2px solid #ffc900;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--页眉部分-->
+    <header class="container-fluid">
+        <!--页眉总体分成四行-->
+        <!--第一行-->
+        <div class="row">
+            <img src="../images/top_banner.jpg" class="img-responsive">
+        </div>
+        <!--第二行分成三部分-->
+        <div class="row padding">
+
+            <div class="col-md-3">
+                <img src="../images/logo.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-5">
+                <input class="search_input" placeholder="请输入所要查找的线路名称" >
+                <a class="search_btn" href="#">搜索</a>
+            </div>
+            <div class="col-md-4">
+                <img src="../images/hot_tel.jpg" class="img-responsive">
+            </div>
+        </div>
+        <!--第三行 导航栏-->
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <!--定义汉堡按钮-->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">LOGO</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--第四行 轮播图-->
+        <div class="row">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="../images/banner_1.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                        <img src="../images/banner_2.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                        <img src="../images/banner_3.jpg" alt="...">
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--主体部分-->
+    <div class="container">
+        <!--主体部分第一行-->
+        <div class="row jx">
+            <img src="../images/icon_5.jpg">
+            <span>小陈精选</span>
+        </div>
+        <!--主体部分第二行-->
+        <div class="row" style="margin-top: 10px">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                <img src="../../images/jiangxuan_1.jpg">
+                <p>
+                    上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                </p>
+                <font color="red"><b>&yen;899</b></font>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="../../images/jiangxuan_1.jpg">
+                    <p>
+                        上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                    </p>
+                    <font color="red"><b>&yen;899</b></font>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="../../images/jiangxuan_1.jpg">
+                    <p>
+                        上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                    </p>
+                    <font color="red"><b>&yen;899</b></font>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="../../images/jiangxuan_1.jpg">
+                    <p>
+                        上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                    </p>
+                    <font color="red"><b>&yen;899</b></font>
+                </div>
+            </div>
+        </div>
+        <!--主体部分第三行-->
+        <div class="row jx">
+            <img src="../images/icon_6.jpg">
+            <span>国内游</span>
+        </div>
+        <!--主体部分第四行 分两个格子 第二个格子再分两行-->
+        <div class="row">
+            <!--第一格-->
+            <div class="col-md-4">
+                <div>
+                    <img src="../images/guonei_1.jpg" class="thumbnail padding">
+                </div>
+            </div>
+            <!--第二格-->
+            <div class="col-md-8">
+                <!--第二格的第一行-->
+                <div class="row" style="margin-top: 30px">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="../../images/jiangxuan_1.jpg">
+                            <p>
+                                上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                            </p>
+                            <font color="red"><b>&yen;899</b></font>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="../../images/jiangxuan_1.jpg">
+                            <p>
+                                上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                            </p>
+                            <font color="red"><b>&yen;899</b></font>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="../../images/jiangxuan_1.jpg">
+                            <p>
+                                上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                            </p>
+                            <font color="red"><b>&yen;899</b></font>
+                        </div>
+                    </div>
+                </div>
+                <!--第二个的第二行-->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="../../images/jiangxuan_1.jpg">
+                            <p>
+                                上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                            </p>
+                            <font color="red"><b>&yen;899</b></font>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="../../images/jiangxuan_1.jpg">
+                            <p>
+                                上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                            </p>
+                            <font color="red"><b>&yen;899</b></font>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="../../images/jiangxuan_1.jpg">
+                            <p>
+                                上海飞三亚，五天四晚自由行（春节销售+亲子+蜜月）
+                            </p>
+                            <font color="red"><b>&yen;899</b></font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页脚部分-->
+    <footer class="container-fluid">
+        <!--两行两个图片-->
+        <div class="row"></div>
+        <div class="row"></div>
+    </footer>
+</body>
+</html>

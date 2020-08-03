@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math对象</title>
+    <script>
+        /*
+        Math:数学对象
+            1.创建
+                特点：该对象不用创建，直接使用，Math.方法名
+            2.方法
+                random():返回0-1之间的随机数，包含0，不包含1
+                ceil(x):对一个数进行向上取整
+                floor(x):对一个数向下取值
+                round(x):四舍五入
+
+         */
+        document.write(Math.PI+"<br>");//3.141592653589793
+        document.write(Math.random()+"<br>");//0.9805072720744026
+        document.write(Math.round(3.2)+"<br>");//3
+        document.write(Math.ceil(3.2)+"<br>");//4
+        document.write(Math.floor(3.2)+"<br>");//3
+        //取1-100之间的随机整数
+        var num = Math.random()*100+1;
+        num1 = Math.round(num);
+        document.write(num1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

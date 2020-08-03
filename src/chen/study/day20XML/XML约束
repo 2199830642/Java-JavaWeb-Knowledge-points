@@ -1,0 +1,18 @@
+
+    约束：规定xml文档的书写规则的
+            作为框架的使用者
+                只要能在xml中引入约束文档
+                能够简单的读懂约束文档
+
+            分类：
+                1.DTD：一种简单的约束技术
+                2.Schema：一种复杂的约束技术
+
+            DTD：
+                引入dtd文档到xml文档中
+                    内部dtd：将约束规则定义在xml文档中
+                    外部dtd：将约束规则定义在外部的dtd文件中
+                        本地：<!DOCTYPE 根标签名 SYSTEM "dtd文件所在位置">
+                        网络：<!DOCTYPE 根标签名 SYSTEM PUBLIC "dtd文件名字" "dtd文件所在位置的URL">
+
+            Schema:

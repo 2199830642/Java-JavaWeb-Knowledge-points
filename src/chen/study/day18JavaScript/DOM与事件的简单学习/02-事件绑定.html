@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+
+</head>
+<body>
+        <img id="star" src="../../images/icon_5.jpg" onclick="fun()">
+
+        <img id="star1" src="../../images/icon_5.jpg">
+        <script>
+            //第一种事件绑定操作
+            function fun(){
+                alert("我被点了");
+                alert("我又被点了");
+            }
+
+            //第二种事件绑定操作
+            function fun2() {
+                alert("咋老点我");
+            }
+            var star1 = document.getElementById("star1");
+            star1.onclick=fun2;
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+    Request：
+        1.request对象和response对象的原理
+            1.request和response对象是由服务器创建的，我们来使用
+            2.request对象是用来获取请求消息，response对象是用来设置响应消息
+
+        2.request对象继承体系结构：
+            ServletRequest     --接口
+                | 继承
+            HttpServletRequest --接口
+                | 实现
+            org.apache.catalina.connector.RequestFacade类（tomcat）
+
+        3.request：获取请求消息
+            1.获取请求消息数据
+                1.获取请求行数据
+                    1.GET /day22_Servlet_HTTP_war_exploded/RequestDemo01?name=zhangsan HTTP/1.1
+                    方法：
+                        1.获取请求方式：GET
+                            String getMethod()
+
+                        2.获取虚拟目录：/day22_Servlet_HTTP_war_exploded             重点掌握
+                            String getContextPath()
+
+                        3.获取Servlet的路径：/RequestDemo01
+                            String getServletPath()
+
+                        4.获取get方式的请求参数：name=zhangsan
+                            String getQueryString()
+
+                        5.获取请求的URI：/day22_Servlet_HTTP_war_exploded/RequestDemo01       重点掌握
+                            String getRequestURI()
+                            StringBuffer getRequestURL() http://localhost:8080/day22_Servlet_HTTP_war_exploded/RequestDemo01
+
+                            URL:统一资源定位符 http://localhost:8080/day22_Servlet_HTTP_war_exploded/RequestDemo01
+                            URI:统一资源标识符 /day22_Servlet_HTTP_war_exploded/RequestDemo01
+
+                        6.获取协议及版本
+                            String getProtocol()
+
+                        7.获取客户机的IP地址
+                            String getRemoteAddr()
+
+                2.获取请求头数据
+                    方法：
+                        1.String getHeader(String name):通过获取请求头的名称，获取请求头的值
+
+                        2.Enumeration<String> getHeaderNames():获取所有请求头的名称
+
+                3.获取请求体数据：只有post请求方式，才有请求体，在请求体中封装了post的请求参数
+                    步骤：
+                        1.获取流对象
+                            1.BufferedReader getReader():获取字符输入流，只能操作字符数据
+
+                            2.ServletInputStream getInputStream():获取字节输入流，可以操作所有类型的数据
+                            在文件上传知识点讲解
+
+                        2.再从流对象中拿数据
+
+    (重点)  2.其他功能   不论是get还是post都可以使用以下方法去获取请求参数
+                1.获取请求参数的通用方式
+                    1.String getParameter(String name):根据参数名称，获取参数值  username=zhangsan
+                    1.String[] getParameterValues(String name):根据参数名称，获取参数值的数组 hobby=xx&hobby=game
+                    3.Enumeration getParameterNames():获取所有请求的参数名称
+                    4.Map<String,String[]> getParameterMap():获取所有参数的map集合
+
+                    中文乱码问题：
+                        get方式提交：tomcat8 已经将其问题解决
+                        post方式提交：会乱码
+                            解决：在获取参数前设置request的编码
+                                 request.setCharacterEncoding("utf-8");
+
+                2.请求转发：一种在服务器内部的资源跳转方式
+                    1.步骤：
+                        1.通过request对象获取请求转发器对象：RequestDispatcher  getRequestDispatcher(String path)
+
+                        2.使用RequestDispatcher对象进行转发：forward(ServletRequest request,ServletResponse response)
+
+                    2.特点：
+                        1.浏览器地址栏路径没有发生变化
+                        2.只能转发到当前服务器内部资源中
+                        3.转发是一次请求
+
+                3.共享数据：
+                    域对象：一个有作用范围的对象，可以在范围内共享数据
+                    request域：代表一次请求的范围，一般用于请求转发的多个资源中去共享数据
+                    方法：
+                        1.setAttribute(String name,Object obj):存储数据
+                        2.Object getAttribute(String name):通过键获取值
+                        3.void removeAttribute(String name):通过键来移除这个键值对
+
+
+                4.获取ServletContext
+                        ServletContext getServletContext()

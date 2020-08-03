@@ -1,0 +1,41 @@
+
+    JSTL知识点：
+        1.概念：JavaSever Pages Tag Library JSP标准标签库
+            是由Apache组织提供的开源的免费的jsp标签
+
+        2.作用：用于简化和替换jsp页面上的java代码
+
+        3.使用步骤：
+            1.导入jstl相关的jar包
+            2.引入标签库：taglib指令：<%@ taglib %>
+            3.使用标签
+
+        4.常用的jstl标签
+            1.if：相当于java代码的if语句
+                    1.属性
+                    必须的属性 test ：接收boolean表达式
+                        如果表达式为true，则显示if标签体内容
+                        反之不显示
+                        一般情况下，test属性值会结合el表达式一起使用
+                     2.注意：c:if标签没有else情况，想要else选项，可以再定义一个c:if标签
+
+            2.choose：相当于java的switch语句
+            3.foreach：相当于java的for循环
+                            1.完成重复的操作
+                                属性：
+                                    begin：开始值
+                                    end：结束值
+                                    var：临时变量
+                                    step：步长
+                                    varStatus:循环状态对象
+                                           如：varStatus="s"   ${s.index}:元素的索引从0开始
+                                                               ${s.count}:代表循环次数从1开始
+                            2.遍历
+                                属性：
+                                    items：容器对象
+                                    var：元素临时变量
+                                    varStatus:循环状态对象
+                                           如：varStatus="s"   ${s.index}:元素的索引从0开始
+                                                               ${s.count}:代表循环次数从1开始
+
+        5.练习：

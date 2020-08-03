@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="day25_JSP:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/day25_JSP_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="day25_JSP/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="day25_JSP" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="lib" module-name="day25_JSP" />
+          <element id="file-copy" path="$PROJECT_DIR$/day25_JSP/web/WEB-INF/lib/jstl-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/day25_JSP/web/WEB-INF/lib/standard-1.1.2.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

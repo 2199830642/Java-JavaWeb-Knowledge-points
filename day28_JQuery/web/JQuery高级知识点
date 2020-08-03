@@ -1,0 +1,56 @@
+
+    JQuery 高级
+        1.动画
+            1. 三种方式显示和隐藏元素
+            			1. 默认显示和隐藏方式
+            				1. show([speed,[easing],[fn]])
+            					1. 参数：
+            						1. speed：动画的速度。三个预定义的值("slow","normal", "fast")或表示动画时长的毫秒数值(如：1000)
+            						2. easing：用来指定切换效果，默认是"swing"，可用参数"linear"
+            							* swing：动画执行时效果是 先慢，中间快，最后又慢
+            							* linear：动画执行时速度是匀速的
+            						3. fn：在动画完成时执行的函数，每个元素执行一次。
+
+            				2. hide([speed,[easing],[fn]])
+            				3. toggle([speed],[easing],[fn])
+
+            			2. 滑动显示和隐藏方式
+            				1. slideDown([speed],[easing],[fn])
+            				2. slideUp([speed,[easing],[fn]])
+            				3. slideToggle([speed],[easing],[fn])
+
+            			3. 淡入淡出显示和隐藏方式
+            				1. fadeIn([speed],[easing],[fn])
+            				2. fadeOut([speed],[easing],[fn])
+            				3. fadeToggle([speed,[easing],[fn]])
+
+        2.遍历
+            1.js的遍历方式：for循环
+            2.jq的遍历方式：
+                1.jquery对象.each(callback)
+                2.$.each(jq对象,[callback])
+                3.for...of:类似于增强for  3.0之后的版本才可以用
+                    for(元素对象 of 容器对象)
+
+        3.JQuery事件绑定
+            1.jQuery标准的绑定方式
+                jq对象.事件方法(回调函数);
+
+            2.on绑定事件，of解除绑定
+                jq对象.on("事件名称",回调函数);
+                    如：$("#id").on("click",function(){});
+                jq对象.of("事件名称",回调函数);
+
+            3.事件切换：toggle
+                jq对象.toggle(fn1,fn2...),点一下执行fn1，点两下执行fn2...
+                jQuery1.9之后移除了该功能，如果想恢复用jquery-migrate-1.0.0的插件
+
+        4.小案例
+
+        5.插件:增强jQuery的功能
+            1.实现方式：
+                1.$.fn.extend(object)
+                    增强通过jQuery获取对象的功能 $("#id")
+
+                2.$.extend(object)
+                    增强jQuery对象自身的功能 $

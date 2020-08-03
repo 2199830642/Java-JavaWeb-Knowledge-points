@@ -1,0 +1,62 @@
+
+    Session:
+        1.概念：服务器端会话技术，在一次会话的多次请求间共享数据，将数据保存在服务器端的对象中，HttpSession
+
+        2.快速入门：
+            1.获取Session对象
+                HttpSession session = request.getSession();
+
+            2.使用HttpSession对象：
+                Object getAttribute();
+                void setAttribute(String name,Object value);
+                void removeAttribute();
+
+        3.原理：Session的实现是依赖于Cookie的
+
+        4.细节：
+            1.当客户端关闭后，服务器不关闭，两次获取Session是否为同一个？
+                默认情况下不是，因为客户端关闭了代表一次会话结束了
+                如果需要相同，则可以创建Cookie，Cookie的键为JSEEIONID,值为session.getID()
+                设置最大存活时间，让Cookie持久化保存
+                        //1.获取Session
+                        HttpSession session = request.getSession();
+                        System.out.println(session);
+                        //期望客户端关闭后，也能使获取的session相同
+                        Cookie c = new Cookie("JSESSIONID",session.getId());
+                        c.setMaxAge(60*60);//一个小时
+                        response.addCookie(c);
+
+            2.客户端不关闭，服务器端关闭后，两次获取的Session是否为同一个
+                不是同一个，但是要确保数据不丢失
+                    Session的钝化：
+                        在服务器正常关闭之前，将Session对象序列化到硬盘上
+                    Session的活化：
+                        在服务器启动后，将Session文件转化为内存中的Session对象即可
+
+            3.Session什么时候被销毁？
+                1.服务器关闭
+                2.session对象调用invalidate()
+                3.session有一个默认的失效时间 30min
+                    选择性的修改  /Library/Tomcat/conf/web.xml里
+                    <session-config>
+                    <session-timeout>30</session-timeout>
+                    </session-config>
+
+        案例：验证码案例
+            1.需求：
+                1.访问一个带有验证码的登录页面login.jsp
+                2.输入用户名，密码和验证码
+                    如果用户名或者密码输入有误，跳转登录页面，显示：用户名或密码错误
+                    如果验证码输入有误，跳转登录页面，提示：验证码错误
+                    如果全部输入正确，那么跳转到主页success.jsp，显示：用户名，欢迎您
+
+            2.分析：
+                1.设置request的编码
+                2.获取参数map集合
+                3.获取验证码
+                4.将用户信息封装到User对象
+                5.判断程序生成的验证码和用户输入的验证码是否一致，从Session中获取程序生成的验证码
+                    不一致：给用户提示信息，验证码错误（用request转发），跳转登录页面
+                    一致：再次判断用户名和密码是否一致
+                                正确：登陆成功,存储数据，跳转到success.jsp，重定向
+                                不正确：给提示信息，跳转到登录页面

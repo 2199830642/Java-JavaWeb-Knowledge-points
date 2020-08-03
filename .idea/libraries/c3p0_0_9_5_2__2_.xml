@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="c3p0-0.9.5.2 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/c3p0-0.9.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/druid-1.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/mchange-commons-java-0.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/mysql-connector-java-8.0.20.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/spring-beans-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/spring-core-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/spring-jdbc-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/spring-tx-5.0.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

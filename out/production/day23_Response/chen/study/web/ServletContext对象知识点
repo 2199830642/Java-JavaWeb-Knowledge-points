@@ -1,0 +1,26 @@
+
+    ServletContext对象：
+        1.概念：代表整个web应用，可以和程序的容器(服务器)通信
+
+        2.获取方式：
+            1.通过request对象获取
+                request.getServletContext()
+            2.通过HttpServlet来获取
+                this.getServletContext()
+
+        3.功能：
+            1.获取MIME类型：
+                MIME类型：在互联网通信过程中获取的一种文件数据类型
+                    格式：大类型/小类型 例如：text/html   image/jpeg
+                获取：
+                    String getMimeType(String file)
+
+            2.域对象：共享数据
+                1.setAttribute(String name,object value)
+                2.getAttribute(String name)
+                3.removeAttribute(String name)
+
+                ServletContext的范围：可以共享所有用户所有请求的数据
+
+            3.获取文件的真实路径(服务器路径)：
+                1.方法：String getRealPath(String path)

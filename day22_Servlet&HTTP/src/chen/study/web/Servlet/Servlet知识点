@@ -1,0 +1,104 @@
+
+    Servlet： sever applet
+        概念：运行在服务器端的小程序
+            servlet就是一个接口，定义了java类被浏览器访问到（被tomcat识别）的规则
+            将来我们自定义的类，实现servlet接口，重写方法
+
+        快速入门
+            1.创建一个JAVAEE项目
+            2.定义一个类，必须实现servlet接口
+                public class ServletDemo01 implements Servlet {
+                重写五个方法
+                }
+            3.实现接口中的抽象方法
+            4.配置servlet
+                在web.xml中配置
+                <!--配置servlet-->
+                    <servlet>
+                        <servlet-name>demo1</servlet-name>
+                        <servlet-class>chen.study.web.day22Servlet和HTTP请求协议.ServletDemo01</servlet-class>
+                    </servlet>
+                    <servlet-mapping>
+                        <servlet-name>demo1</servlet-name>
+                        <url-pattern>/demo1</url-pattern>
+                    </servlet-mapping>
+
+        Servlet的执行原理
+            1.当服务器接收到客户端浏览器的请求后，会解析请求的URL路径,获取访问的Servlet的资源路径
+            2.查找web.xml文件，是否有对应的<url-pattern>标签体内容
+            3.如果有，则再找到对应的<servlet-class>全类名
+            4.tomcat会将字节码文件加载进内存并创建其对象
+            5.调用其方法
+
+        Servlet的生命周期：
+            1.被创建：执行init方法，只执行一次
+                1.Servlet什么时候被创建？
+                    默认情况下第一次被访问时，Servlet被创建
+                    可以配置执行Servlet的创建时机
+                        在web.xml文档中的<servlet>标签下指定创建Servlet的创建时机
+                                        1.第一次被访问时创建
+                                            <load-on-startup>的值为负数，则第一次访问被创建，默认值就是-1
+                                        2.在服务器启动时创建
+                                            <load-on-startup>的值为0或正整数
+
+                2.Servlet的init方法只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet是单例的
+                    多个用户同时访问时，可能存在线程安全问题
+                    解决方法：
+                        不能加锁，尽量不要在Servlet中定义成员变量，可以在方法中定义局部变量
+                        如果一定要定义成员变量，那么不要给其修改值
+
+            2.提供服务：执行service方法，会执行多次
+                每次访问Servlet方法时，都会被调用一次
+
+            3.被销毁：执行destroy方法，只执行一次
+                Servlet被销毁之前执行。服务器关闭时，Servlet被销毁
+                只有服务器正常关闭时，才会执行destroy方法
+                一般用来释放资源
+
+        Servlet3.0:
+            好处：支持注解配置，可以不需要web.xml了
+
+            步骤：
+                1.创建JavaEE项目，选择Servlet的版本3.0以上，可以不创建web.xml
+                2.定义一个类，实现Servlet接口
+                3.重写方法
+                4.在类上使用一个注解@WebServlet注解，进行配置
+                    例子：@WebServlet("/demo")
+                    @WebServlet("资源路径")
+
+        Servlet体系结构:
+            Servlet接口（父）
+                GenericServlet 抽象类（子）
+                    HttpServlet 抽象类（孙）
+
+            GenericServlet:将Servlet接口中其他方法进行了默认空实现，只有service方法抽象
+                所以定义Servlet类时，可以继承GenericServlet，只需实现service方法即可 （很少用）
+
+            HttpServlet:对HTTP协议的一种封装，可以简化操作
+                步骤：
+                    1.定义类继承HttpServlet
+                    2.重写doGet方法或者doPost方法
+
+        Servlet相关配置：
+            urlPattern:Servlet的访问路径
+                1.一个Servlet可以定义多个访问路径 @WebServlet({"/d4","/dd4","/ddd4"})
+                2.路径定义规则
+                    1./xxx
+                    2./xxx/xxx 多层路径目录结构
+                    3. *.do 例如 demo4.do
+
+
+
+        IDEA和Tomcat的相关配置
+            1.IDEA会为每一个tomcat部署的项目单独建立一份配置文件
+                查看控制台的log：CATALINA_BASE：[/Users/chen/Library/Caches/IntelliJIdea2019.3/tomcat/Tomcat_9_0_341_IdeaProjects]
+
+            2.工作空间项目和Tomcat部署的项目
+                tomcat真正访问的是"Tomcat部署的web项目"对应着"工作空间项目"目录下的所有资源
+
+                WEB-INF下的资源是无法被浏览器访问到的
+
+            3.断点调试：使用debug（小虫子启动）
+
+
+

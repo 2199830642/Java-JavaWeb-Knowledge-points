@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element对象</title>
+</head>
+<body>
+        <a>点我试一试</a>
+        <input type="button" value="设置属性值" id="btn1">
+        <input type="button" value="删除属性值" id="btn2">
+<script>
+    //获取element对象
+    var elea = document.getElementsByTagName("a")[0];
+    //设置属性
+    var btn1 = document.getElementById("btn1");
+    btn1.onclick=function () {
+        elea.setAttribute("href","https://www.baidu.com");
+    }
+    //删除属性
+    var btn2 = document.getElementById("btn2");
+    btn2.onclick=function () {
+        elea.removeAttribute("href","https://www.baidu.com");
+    }
+</script>
+</body>
+</html>

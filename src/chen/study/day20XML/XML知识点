@@ -1,0 +1,63 @@
+
+    XML
+        1.概念 Extensible Markup Language 可扩展标记语言
+            1.可扩展：标签都是自定义的
+
+            2.功能
+                存储数据
+                    1.作为配置文件使用
+                    2.在网络中传输
+
+            3.XML与HTML的区别
+                1.XML的标签都是自定义的，HTML的标签是预定义的
+                2.XML的语法非常严格，HTML语法很松散
+                3.功能不一样，XML用于存储数据，HTML用于展示数据
+
+        2.语法：
+            基本语法：
+                1.第一行必须定义为文档声明
+                2.xml文档中有且仅有一个根标签
+                3.属性值必须使用引号引起来
+                4.标签必须正确关闭
+                5.标签名称区分大小写
+            快速入门：
+                <?xml version='1.0' ?>
+
+                <users>
+                    <user id="1">
+                        <name>zhangsan</name>
+                        <age>23</age>
+                        <gender>male</gender>
+                    </user>
+                    <user id="2">
+                        <name>lisi</name>
+                        <age>24</age>
+                        <gender>male</gender>
+                    </user>
+                </users>
+
+            组成部分：
+                1.文档声明
+                    格式：<?xml 属性列表?>
+                    属性列表：
+                        version：版本号 必须得有这个属性
+                        encoding：编码方式 告知解析引擎当前文档所用的字符集,默认值：ISO-8859-1
+                        standalone：是否独立 取值有两个 yes(不依赖其他文件)和no(依赖其他文件)
+
+                2.指令(了解即可)
+                    <? xml-stylesheet type="text/css" href="a.css" ?>
+                3.标签
+                    标签名称是自定义的
+                    规则：
+                        名称可以包含字母、数字以及其他的字符
+                        名称不能以数字或者标点符号开始
+                        名称不能以字母 xml（或者 XML、Xml 等等）开始
+                        名称不能包含空格
+
+                4.标签里面的属性
+                    id属性值是唯一的
+
+                5.文本内容
+                    CDATA区：该区域里的元素会被原样展示
+                    格式：
+                        <![CATA[数据]]>

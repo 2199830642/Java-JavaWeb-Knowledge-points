@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础选择器</title>
+    <style>
+        #div1{
+            color: red;
+        }
+        div{
+            color: aqua;
+        }
+        .cls1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+    1.id选择器：选择具体的id属性值的元素,建议在一个html页面中id值唯一
+            语法：#id属性值{}
+    2.元素选择器：选择具有相同标签的元素
+    3.类选择器：选择具有相同的class属性值的元素
+            语法：.class属性值{}
+
+    注意：优先级：id选择器>类选择器>元素选择器
+-->
+    <div id="div1">小陈</div>
+    <div>小王</div>
+    <p class="cls1">建大</p>
+</body>
+</html>

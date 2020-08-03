@@ -1,0 +1,37 @@
+
+    BootStrap
+        概念：一个前端开发的框架，来自于twitter
+            框架：一个半成品软件，开发人员可以在框架基础上再进行开发，简化编码
+            好处：
+                1.定义了很多的css样式和js插件，开发人员可以直接通过这些样式和插件得到丰富的页面效果
+                2.响应式布局
+                        同一套页面可以兼容不同分辨率的设备
+
+        快速入门
+            1.下载bootstrap
+            2.在项目中将这三个文件夹复制
+            3.创建一个html页面引入必要的资源文件
+
+            ！！！模板！！！
+
+            <!DOCTYPE html>
+            <html lang="zh-CN">
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+                <title>HelloWorld</title>
+
+                <!-- Bootstrap -->
+                <link href="css/bootstrap.min.css" rel="stylesheet">
+
+                <!-- jQuery（Bootstrap的JavaScript插件所必需的） -->
+                <script src="js/jquery-3.2.1.min.js"></script>
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                <script src="js/bootstrap.min.js"></script>
+            </head>
+            <body>
+            <h1>你好，世界！</h1>
+            </body>
+            </html>

@@ -1,0 +1,52 @@
+
+    Request：
+        1.request对象和response对象的原理
+            1.request和response对象是由服务器创建的，我们来使用
+            2.request对象是用来获取请求消息，response对象是用来设置响应消息
+
+        2.request对象继承体系结构：
+            ServletRequest     --接口
+                | 继承
+            HttpServletRequest --接口
+                | 实现
+            org.apache.catalina.connector.RequestFacade类（tomcat）
+
+        3.request：获取请求消息
+            1.获取请求消息数据
+                1.获取请求行数据
+                    1.GET /day22_Servlet_HTTP_war_exploded/RequestDemo01?name=zhangsan HTTP/1.1
+                    方法：
+                        1.获取请求方式：GET
+                            String getMethod()
+
+                        2.获取虚拟目录：/day22_Servlet_HTTP_war_exploded             重点掌握
+                            String getContextPath()
+
+                        3.获取Servlet的路径：/RequestDemo01
+                            String getServletPath()
+
+                        4.获取get方式的请求参数：name=zhangsan
+                            String getQueryString()
+
+                        5.获取请求的URI：/day22_Servlet_HTTP_war_exploded/RequestDemo01       重点掌握
+                            String getRequestURI()
+                            StringBuffer getRequestURL() http://localhost:8080/day22_Servlet_HTTP_war_exploded/RequestDemo01
+
+                            URL:统一资源定位符 http://localhost:8080/day22_Servlet_HTTP_war_exploded/RequestDemo01
+                            URI:统一资源标识符 /day22_Servlet_HTTP_war_exploded/RequestDemo01
+
+                        6.获取协议及版本
+                            String getProtocol()
+
+                        7.获取客户机的IP地址
+                            String getRemoteAddr()
+
+                2.获取请求头数据
+                    方法：
+                        1.String getHeader(String name):通过获取请求头的名称，获取请求头的值
+
+                        2.Enumeration<String> getHeaderNames():获取所有请求头的名称
+
+                3.获取请求体数据
+
+            2.其他功能

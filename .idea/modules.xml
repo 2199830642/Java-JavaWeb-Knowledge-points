@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JAVA的学习小Demo.iml" filepath="$PROJECT_DIR$/JAVA的学习小Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day21_Tomcat/day21_Tomcat.iml" filepath="$PROJECT_DIR$/day21_Tomcat/day21_Tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day22_LOGINTest/day22_LOGINTest.iml" filepath="$PROJECT_DIR$/day22_LOGINTest/day22_LOGINTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day22_Servlet&amp;HTTP/day22_Servlet&amp;HTTP&amp;Request.iml" filepath="$PROJECT_DIR$/day22_Servlet&amp;HTTP/day22_Servlet&amp;HTTP&amp;Request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day23_Download/day23_Download.iml" filepath="$PROJECT_DIR$/day23_Download/day23_Download.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day23_Response/day23_Response.iml" filepath="$PROJECT_DIR$/day23_Response/day23_Response.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day24_Cookie&amp;Session/day24_Cookie&amp;Session.iml" filepath="$PROJECT_DIR$/day24_Cookie&amp;Session/day24_Cookie&amp;Session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day25_JSP/day25_JSP.iml" filepath="$PROJECT_DIR$/day25_JSP/day25_JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day_26WebPractice/day26_WebPractice.iml" filepath="$PROJECT_DIR$/day_26WebPractice/day26_WebPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day27_Filter&amp;Listener/day27_Filter&amp;Listener.iml" filepath="$PROJECT_DIR$/day27_Filter&amp;Listener/day27_Filter&amp;Listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day28_JQuery/day28_JQuery.iml" filepath="$PROJECT_DIR$/day28_JQuery/day28_JQuery.iml" />
+    </modules>
+  </component>
+</project>

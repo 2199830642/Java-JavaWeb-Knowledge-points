@@ -1,0 +1,19 @@
+
+    CSS样式与JS插件
+        全局CSS样式：
+            按钮:class="btn btn-default"
+            图片:class="img-responsive":图片在任意尺寸都占100%
+                图片的形状：
+                        方形：<img src="../images/banner_1.jpg" class="img-responsive img-rounded">
+                        圆形：<img src="../images/banner_1.jpg" class="img-responsive img-circle">
+                        相框：<img src="../images/banner_1.jpg" class="img-responsive img-thumbnail">
+            表格：class="table table-bordered table-hover"
+            表单：
+                表单的每一项都可以加class="col-sm-2 control-label"
+
+        组件：
+            导航条
+            分页条
+
+        插件：
+            轮播图

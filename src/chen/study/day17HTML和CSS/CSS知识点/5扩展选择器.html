@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展选择器</title>
+    <style>
+        div{
+            color: yellow;
+        }
+        div p{
+            color: red;
+        }
+        div>p{
+            border: 1px solid;
+        }
+        input[type="text"]{
+            border: 5px blue solid;
+        }
+        a:link{
+            color: pink;
+        }
+        a:visited{
+            color: blueviolet;
+        }
+        a:active{
+            color: gray;
+        }
+        a:hover{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>小陈</p>
+    小王
+</div>
+用户名：<input type="text"><br>
+<a href="#" target="_blank">本页面</a>
+</body>
+</html>

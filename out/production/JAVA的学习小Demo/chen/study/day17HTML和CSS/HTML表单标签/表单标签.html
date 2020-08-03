@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+form 用于定义表单，可以定义一个范围，范围代表采集用户数据的范围
+    属性：
+        action:指定提交数据的URL
+        method:指定提交方式
+            分类：一共有七种，两种比较常用
+                get:
+                post:
+
+    表单项中的数据要想被提交，必须指定其name属性
+-->
+
+<form action="#" method="get" target="_self">
+    <!--input-->
+    <label for="username">用户名:</label><input type="text" name="username" id="username" placeholder="请输入默认值"><br>
+    <label for="password">密码:</label><input type="password" name="username" id="password" placeholder="请输入密码"><br>
+    性别:<input type="radio" name="gender" value="male" checked="checked"> 男<br>
+        <input type="radio" name="gender" value="female"> 女<br>
+    爱好:<input type="checkbox" name="hobby" value="skate" checked="checked">滑板<br>
+        <input type="checkbox" name="hobby" value="java">java<br>
+        <input type="checkbox" name="hobby" value="game">游戏<br>
+    上传头像:<input type="file" name="file"><br>
+    隐藏域：<input type="hidden" name="id" value="aaa"><br>
+    取色器：<input type="color" name="color"><br>
+    生日：<input type="date" name="birthday"><br>
+    生日：<input type="datetime-local" name="birthday"><br>
+    邮箱：<input type="email" name="email"><br>
+    年龄：<input type="number" name="age"><br>
+
+    <!--select-->
+    省份：<select name="province">
+            <option value="" selected>--请选择--</option>
+            <option value="1">--陕西--</option>
+            <option value="2">--四川--</option>
+            <option value="3">--浙江--</option>
+        </select><br>
+
+    <!--textarea-->
+    自我描述：<textarea cols="20" rows="10" name="description"></textarea><br>
+
+    <input type="button" value="一个按钮"><br>
+    <input type="submit" value="登录"><br>
+    <input type="image" src="../HTML标签/1.jpeg">
+
+
+</form>
+</body>
+</html>

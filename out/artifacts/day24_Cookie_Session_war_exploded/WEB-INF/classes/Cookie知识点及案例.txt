@@ -1,0 +1,76 @@
+
+    会话技术：
+        1.会话：一次会话中包含多次请求与响应
+                一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止
+
+        2.功能：在一次会话的范围内的多次请求间，共享数据
+
+        3.方式：
+            1.客户端会话技术：Cookie
+            2.服务器端会话技术：Session
+
+    Cookie：
+        1.概念：客户端会话技术，将数据保存到客户端
+
+        2.快速入门：
+            Cookie使用步骤：
+                1.创建Cookie对象，绑定数据
+                    new Cookie(String name,String value)
+                2.发送Cookie对象
+                    response.addCookie(Cookie cookie)
+                3.获取Cookie，拿到数据
+                    Cookie[] request.getCookies()
+
+        3.实现原理
+            基于响应头set-cookie和请求头Cookie实现的
+
+        4.Cookie细节
+            1.一次是否可以发送多个Cookie？
+                可以
+                可以创建多个Cookie对象，然后response多次调用addCookie方法发送cookie即可
+
+            2.cookie在浏览器中保存多长时间？
+                1.默认情况下，当浏览器关闭后,Cookie数据被销毁
+                2.设置cookie的生命周期，使其长久化的存储
+                    setMaxAge(int second)
+                        正数：将cookie数据写到硬盘的文件中，持久化存储，参数是cookie的存活时间
+                        负数：默认
+                        零：删除cookie信息
+
+            3.cookie能不能存中文
+                在tomcat8之前，cookie中不能直接存储中文数据
+                    需要将中文数据转码---一般采用URL编码
+                在tomcat8之后，cookie支持中文数据 特殊字符还是不支持，建议用URL编码
+
+            4.cookie共享问题(在一个tomcat服务器下有多个web项目，那么这些项目中的cookie能不能共享？)
+                默认情况下，cookie不能共享
+                setPath(String path);设置cookie的获取范围，默认情况会设置当前的虚拟目录
+                c.setPath("/")；这样设置 这些项目就可以共享
+
+            5.不同的tomcat服务器之间cookie还可以共享吗？
+                setDomain(String path);如果设置一级域名相同，那么多个服务器之间Cookie就可以共享了
+                比如：setDomain(".baidu.com"),那么tieba.baidu.com和news.baidu.com就可以共享cookie
+
+        5.cookie的特点：
+            1.cookie存储数据在客户端浏览器，不安全
+            2.浏览器对于单个cookie大小有限制(4kb左右)，以及对同一个域名下的cookie数量也有限制(20个左右)
+
+            作用：
+                1.cookie一般用于存储少量的不太敏感的数据
+                2.在不登录的情况下完成服务器对客户端的身份识别
+
+        6.Cookie案例：记住上一次的访问时间
+            需求：
+                1.访问一个servlet，如果是第一次访问，则提示"您好，欢迎您首次访问"
+                2.如果不是第一次访问，则提示，欢迎回来，您上次的访问时间为：xxx
+
+            分析：
+                1.可以采用cookie来完成
+                2.在服务器中的servlet中来判断，是否有一个名为lastTime的cookie
+                    有：不是第一次访问
+                        1.响应数据：欢迎回来，您上次的访问时间为：xxx
+                        2.写回cookie：lastTime=2020年07月23日18:02:50
+                    没有：是第一次访问
+                        1.响应数据"您好，欢迎您首次访问"
+                        2.写回cookie：lastTime=2020年07月23日18:02:50
+

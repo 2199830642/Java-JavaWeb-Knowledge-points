@@ -1,0 +1,76 @@
+
+    Response对象
+        1.功能：设置响应消息
+            1.设置响应行
+                1.格式：HTTP/1.1 200 OK
+                2.设置状态码：setStatus(int sc)
+
+            2.设置响应头
+                setHeader(String name,String value)
+
+            3.设置响应空行
+            4.设置响应体
+                步骤：
+                    1.获取输出流：
+                        字符输出流：PrintWriter getWriter()
+
+                        字节输出流：ServletOutPutStream getOutputStream()
+
+                    2.使用输出流将数据输出到客户端浏览器
+
+        案例：
+            1.完成重定向案例
+                方法1：不推荐
+                    /*//1.设置状态码为302
+                    resp.setStatus(302);
+                    //2.设置响应头
+                    resp.setHeader("location","/day23_Response_war_exploded/responseDemo02");*/
+
+                方法2：推荐
+                    //简单的重定向方法
+                    resp.sendRedirect("/day23_Response_war_exploded/responseDemo02");
+
+                重定向的特点：redirect
+                    1.重定向的地址栏发生变化
+                    2.重定向可以访问其他服务器的资源
+                    3.重定向是两次请求，不能使用request域来共享数据
+
+                转发的特点：forward
+                    1.转发的地址栏路径不变
+                    2.转发只能访问当前服务器下的资源
+                    3.转发是一次请求，可以使用request域来共享对象
+
+                路径写法：
+                    分类：
+                        1.相对路径：不可以确定唯一资源
+                                    如：./index.html
+                                    以.开头的路径
+
+                                    规则：找到访问的当前资源和目标资源之间的相对位置关系
+                                    ./代表当前目录  ../代表后退一级目录
+
+                        2.绝对路径：可以确定唯一资源
+                                    如：/day23_Response_war_exploded/responseDemo02
+                                    以/开头的路径
+
+                                    规则：判断定义的路径是给谁用的
+                                            1.给客户端浏览器使用：需要加虚拟目录
+                                                建议虚拟目录动态获取：request.getContextPath()
+
+                                            2.给服务器使用：不需要加虚拟目录
+
+            2.服务器输出字符数据到浏览器案例
+                步骤：
+                    1.输出字符数据。首先获取字符输出流
+                    2.输出数据
+
+                注意乱码问题：PrintWriter pw = resp.getWriter();获取的流默认的编码格式为iso-8859-1
+                所以获取流之前，设置流的编码，以及告诉浏览器如何解码 response.setContentType("text/html;charset=utf-8")
+
+            3.服务器输出字节数据到浏览器案例
+                步骤：
+                    1.输出字节数据。首先获取字节输出流
+                    2.输出数据
+
+                扩展案例：验证码案例
+                    1.本质：图片

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!--配置servletDemo01-->
+    <servlet>
+        <servlet-name>demo1</servlet-name>
+        <servlet-class>chen.study.web.day22Servlet和HTTP请求协议.ServletDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo1</servlet-name>
+        <url-pattern>/demo1</url-pattern>
+    </servlet-mapping>
+    <!--配置servletDemo02-->
+    <servlet>
+        <servlet-name>demo2</servlet-name>
+        <servlet-class>chen.study.web.day22Servlet和HTTP请求协议.ServletDemo02</servlet-class>
+        <!--指定创建Servlet的创建时机
+                1.第一次被访问时创建
+                    <load-on-startup>的值为负数，则第一次访问被创建，默认值就是-1
+                2.在服务器启动时创建
+                    <load-on-startup>的值为0或正整数
+        -->
+        <load-on-startup>-5</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo2</servlet-name>
+        <url-pattern>/demo2</url-pattern>
+    </servlet-mapping>
+</web-app>

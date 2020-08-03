@@ -1,0 +1,81 @@
+
+    用户需求：
+        1.编写login登录页面
+        2.使用Druid数据库连接池技术，操作mysql，day22数据库中的user表
+        3.使用JdbcTemplate技术封装JDBC
+        4.登陆成功后跳转的SuccessServlet页面展示：登陆成功！用户名，欢迎您
+        5.登录失败后跳转到FailServlet展示：登录失败！用户名或密码错误
+
+
+    分析：
+    开发步骤：
+        1.创建项目，导入html页面,配置文件，jar包
+        2.创建数据库环境
+            create table user(
+                id int primary key auto_increment,
+                username varchar(32) unique not null,
+                password varchar(32) unique
+            );
+        3.创建一个包 chen.study.domain,创建User类，对应user表
+            public class User {
+                private int id;
+                private String USERNAME;
+                private String PASSWORD;
+
+                @Override
+                public String toString() {
+                    return "User{" +
+                            "id=" + id +
+                            ", USERNAME='" + USERNAME + '\'' +
+                            ", PASSWORD='" + PASSWORD + '\'' +
+                            '}';
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public String getUSERNAME() {
+                    return USERNAME;
+                }
+
+                public void setUSERNAME(String USERNAME) {
+                    this.USERNAME = USERNAME;
+                }
+
+                public String getPASSWORD() {
+                    return PASSWORD;
+                }
+
+                public void setPASSWORD(String PASSWORD) {
+                    this.PASSWORD = PASSWORD;
+                }
+            }
+        4.创建jdbcUtils
+        5.创建包chen.study.dao,创建类UserDao，提供login的方法
+        6.创建一个测试类，测试方法是否可行
+        7.编写chen.study.web.servlet.LoginServlet类
+        8.BeanUtils工具类，简化数据封装
+            用于封装javaBean的
+                1.JavaBean：标准的java类
+
+                    要求：
+                        1.类必须被public修饰
+                        2.必须提供空参的构造器
+                        3.成员变量必须被private修饰
+                        4.使用公共的Getter和Setter方法
+                    功能：
+                        封装数据
+
+                2.概念：
+                    成员变量：
+                    属性：指的是setter和getter方法截取后的产物
+
+                3.方法：
+                    setProperty(Object obj,String name,String value)
+                    getProperty(Object obj,String name)
+                    populate(Object obj,Map map):将map集合的键值对信息，封装到对应的JavaBean对象中

@@ -1,0 +1,43 @@
+
+    Tomcat：web服务器软件
+        本机ip地址：192.168.0.255
+
+        tomcat启动：
+            1、进入Tomcat的bin目录下：终端输入cd /Library/Tomcat/bin ，输完回车
+            cd /Library/Tomcat/bin 
+                也可以打开Tomcat文件夹，把bin文件夹直接拖拉到终端，当然前提是先输入cd+空格
+            2、授权bin目录下的所有操作：终端输入sudo chmod 755 *.sh，输完回车
+            sudo chmod 755 *.sh
+            3、这时要输入密码，输完回车
+            4、这时候就可以开启Tomcat了，终端输入sudo sh ./startup.sh，输完回车
+            sudo sh ./startup.sh
+
+        访问自己：浏览器输入：localhost:8080
+        访问别人：http://别人的ip地址:8080
+
+        !!!
+        配置：
+            部署项目的方式：
+                1.直接将项目放到webapps目录下即可
+                    访问路径localhost:8080/hello/hello.html
+                    简化部署：直接将项目打包成一个war包,再将war包放在webapps目录下，它自动会解压缩
+
+                2.配置conf/server.xml文件
+                    在<host>标签体中配置
+                    <Context docBase="文件路径" path="/hehe" />
+                    path就是虚拟目录
+
+                3.在conf\Catalina\localhost创建任意名称的xml文件。在文件中编写
+                    <Context docBase="文件路径" />
+                    现在它的虚拟目录就是xml文件的名称
+
+            静态项目和动态项目
+                目录结构
+                    Java动态项目的目录结构
+                        项目的根目录
+                            WEB-INF目录：
+                                web.xml：web项目的核心配置文件
+                                Classes目录：防止字节码文件的目录
+                                lib目录：放置依赖的jar包
+
+            将Tomcat集成到idea中,并且创建JavaEE项目，部署项目

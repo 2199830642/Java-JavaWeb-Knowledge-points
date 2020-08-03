@@ -1,0 +1,23 @@
+
+    Listener:监听器
+        概念：web的三大组件之一
+            事件监听机制：
+                事件：一件事情 点击按钮
+                事件源：事件发生的地方 按钮
+                监听器：一个对象
+                注册监听：将事件、事件源、监听器绑定在一起，当事件源上发生某个事件后执行监听器代码
+
+        ServletContextListener：监听servletContext对象的创建和销毁
+            方法：
+                1.void contextDestroyed(ServletContextEvent sce)：ServletContext对象如果被销毁，销毁之前会调用该方法
+                2.void contextInitialized(ServletContextEvent sce)：ServletContext对象创建后会调用该方法
+
+            步骤：
+                1.定义一个类，实现ServletContextListener接口
+                2.复写方法
+                3.配置
+                    1.注解配置:@WebListener
+                    2.web.xml
+                        <listener>
+                        <listener-class>chen.study.listener.ContextLoaderListener</listener-class>
+                        </listener>

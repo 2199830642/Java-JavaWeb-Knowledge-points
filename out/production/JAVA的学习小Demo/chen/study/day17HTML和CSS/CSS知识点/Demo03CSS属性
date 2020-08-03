@@ -1,0 +1,27 @@
+    CSS属性：
+        1.字体、文本
+                font-size:字体大小
+                font-family:字体
+                font-style:粗体，斜体
+                color：颜色
+                text-align：对齐方式
+                line-height:行高
+
+        2.背景
+                background:
+
+        3.边框
+                border:设置边框各种属性
+
+        4.尺寸
+                width:宽度
+                height：高度
+
+        5.盒子模型:控制布局
+                margin:外边距
+                padding:内边距
+                    默认情况下，内边距会影响整个盒子的大小
+                    所以得设置盒子的属性让设定的width和height是最终盒子的大小
+                    box-sizing: border-box;
+
+                float:浮动

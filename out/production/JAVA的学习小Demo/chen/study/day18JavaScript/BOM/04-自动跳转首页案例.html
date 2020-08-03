@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转首页案例</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+    </style>
+    <script>
+        /*
+            分析：
+                1.显示页面效果 <p>标签
+                2.倒计时读秒
+                    定时器实现
+                        定义一个方法，获取span这个标签，修改span标签体的内容
+                        设计一个定时器，一秒执行一次该方法
+         */
+    </script>
+</head>
+<body>
+<p>
+    <span id="time">5</span>秒之后，自动跳转首页...
+</p>
+<script>
+    var second= 5;
+    var time = document.getElementById("time");
+    function getTime() {
+        second--;
+        if (second<=0){
+            location.href="https://www.baidu.com";
+        }
+        time.innerHTML = second+"";
+    }
+    setInterval(getTime,1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+    <script>
+        /*
+            Window 窗口对象
+                1.创建
+
+                2.方法
+                    1.与弹出框有关的方法
+                            alert();显示带有一段信息和一个确认按钮的警告框
+                            confirm();显示带有一段信息和一个确认按钮以及取消按钮的对话框
+                                    如果用户点击确定按钮：则方法返回true，反之返回false
+                            prompt();显示可提示用户输入的对话框
+                                    返回值获取用户输入的值
+
+                    2.与打开关闭有关的方法
+                            close();关闭浏览器
+                            open();打开一个新的浏览器窗口
+                                返回一个新的window对象
+
+                    3.与定时器有关的方法
+                            setTimeOut() 在指定的毫秒数后调用函数或计算表达式
+                                    参数：1.js代码或方法对象
+                                         2.毫米值
+                                    返回值：返回一个唯一编号，用于取消定时器
+                            clearTimeOut() 取消由setTimeOut()方法设置的timeout
+
+                            setInterval() 按照指定的周期(以毫秒计)来调用函数或计算表达式
+                            clearInterval() 取消
+
+                3.属性
+                    1.获取其他BOM对象
+                        History
+                        Location
+                        Navigator
+                        Screen
+
+                4.特点
+                    1.Window不需要创建可以直接引用window来使用。window.方法名();
+                    2.window引用可以省略。 方法名();
+         */
+        //获取history对象
+        var h1 = window.history;
+        var h2 = history;
+
+        /*var flag = confirm("您确定要退出吗？");
+        if (flag){
+            //退出操作
+            alert("bye~");
+        }else{
+            //提示
+            alert("手别抖");
+        }*/
+
+        /*//输入框
+        var s = prompt("请输入用户名");
+        alert(s);*/
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="打开新窗口" name="打开窗口" style="color: hotpink;border-radius: 5px" align="center" >
+<input id="btn1" type="button" value="关闭新窗口" name="打开窗口" style="color: hotpink;border-radius: 5px" align="center" >
+<!--<script>
+    var but = document.getElementById("btn");
+    var newWindow;
+    but.onclick=function () {
+        var flag = confirm("你确定要跳转吗");
+        if (flag){
+            newWindow=open("https://www.baidu.com");
+        }
+    }
+    var but1 = document.getElementById("btn1");
+    but1.onclick=function () {
+        newWindow.close();
+    }
+</script>-->
+<script>
+    //一次性定时器
+    //var timeout = setTimeout(fun,5000);
+    //clearTimeout(timeout);
+    function fun() {
+        alert('boom~~~');
+    }
+    //循环定时器
+    var interval = setInterval(fun,2000);
+    clearInterval(interval);
+</script>
+</body>
+</html>
