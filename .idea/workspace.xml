@@ -6,20 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56257dfb-f591-4d4b-b05e-6683821e49f1" name="默认更改列表" comment="目前总结的所有javaSE到javaEE笔记,还会持续更新">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/day29_AJAX_JSON_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/day29_AJAX&amp;JSON.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/src/chen/study/web/ajaxServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/01_JQuery实现AJAX_ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/02_JQuery实现AJAX_get.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/03_JQuery实现AJAX_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/AJAX知识点" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/js/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/同步和异步区别.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="56257dfb-f591-4d4b-b05e-6683821e49f1" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/src/chen/study/domain/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/src/chen/study/test/jacksonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/src/chen/study/web/FindUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/src/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/04_json数据语法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/05_json数据语法_遍历.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/06_regist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/JSON知识点.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/WEB-INF/lib/jackson-annotations-2.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/WEB-INF/lib/jackson-core-2.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/WEB-INF/lib/jackson-databind-2.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/校验用户名是否存在案例" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day29_AJAX&amp;JSON/day29_AJAX&amp;JSON.iml" beforeDir="false" afterPath="$PROJECT_DIR$/day29_AJAX&amp;JSON/day29_AJAX&amp;JSON.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day29_AJAX&amp;JSON/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/WEB-INF/lib" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -116,6 +118,16 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="cn.itcast.day14基础加强.Junit单元测试" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day29_AJAX&amp;JSON/src" />
+      <recent name="$PROJECT_DIR$/day29_AJAX&amp;JSON/web" />
+      <recent name="$PROJECT_DIR$/day28_JQuery/web" />
+      <recent name="$PROJECT_DIR$/day28_JQuery/web/JQuery高级" />
+      <recent name="$PROJECT_DIR$/day28_JQuery/web/JQuery基础" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="chen.study.web.filter" />
       <recent name="chen.study.Servlet" />
@@ -124,21 +136,11 @@
       <recent name="chen.study.Cookie" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/day29_AJAX&amp;JSON/web" />
       <recent name="$PROJECT_DIR$/day29_AJAX&amp;JSON/web/js" />
       <recent name="$PROJECT_DIR$/day28_JQuery/web/js" />
       <recent name="$PROJECT_DIR$/day28_JQuery/web" />
-      <recent name="$PROJECT_DIR$/day_26WebPractice/src/chen/study/web/servlet" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/day28_JQuery/web" />
-      <recent name="$PROJECT_DIR$/day28_JQuery/web/JQuery高级" />
-      <recent name="$PROJECT_DIR$/day28_JQuery/web/JQuery基础" />
-      <recent name="$PROJECT_DIR$/day27_Filter&amp;Listener/src" />
-      <recent name="$PROJECT_DIR$/day_26WebPractice/src/chen/study/domain" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat_AJAX&amp;JSON">
@@ -168,21 +170,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProxyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chen.study.Proxy.ProxyTest" />
-      <module name="day27_Filter&amp;Listener" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chen.study.Proxy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day22_LOGINTest" />
+    <configuration name="jacksonTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day29_AJAX&amp;JSON" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="chen.study.test.*" />
@@ -190,34 +179,63 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="chen.study.test" />
-      <option name="MAIN_CLASS_NAME" value="chen.study.test.UserDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day22_loginText" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chen.study.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chen.study.test" />
-      <option name="MAIN_CLASS_NAME" value="chen.study.test.UserDaoTest" />
-      <option name="METHOD_NAME" value="testLogin" />
+      <option name="MAIN_CLASS_NAME" value="chen.study.test.jacksonTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="c3p0-0.9.5.2.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/day22_loginText/web/WEB-INF/libs/c3p0-0.9.5.2.jar" />
-      <method v="2" />
+    <configuration name="jacksonTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day29_AJAX&amp;JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chen.study.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chen.study.test" />
+      <option name="MAIN_CLASS_NAME" value="chen.study.test.jacksonTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="01_JQuery实现AJAX.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.341" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/01_JQuery实现AJAX.html" />
+    <configuration name="jacksonTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day29_AJAX&amp;JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chen.study.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chen.study.test" />
+      <option name="MAIN_CLASS_NAME" value="chen.study.test.jacksonTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jacksonTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day29_AJAX&amp;JSON" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chen.study.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="chen.study.test" />
+      <option name="MAIN_CLASS_NAME" value="chen.study.test.jacksonTest" />
+      <option name="METHOD_NAME" value="test4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="04_json数据语法_遍历.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.341" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/04_json数据语法_遍历.html" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="day29_AJAX&amp;JSON:war exploded">
@@ -1152,10 +1170,6 @@
     <list>
       <item itemvalue="Application.Demo01Jsoup" />
       <item itemvalue="Application.Jsoup_selector" />
-      <item itemvalue="Application.ProxyTest" />
-      <item itemvalue="JAR Application.c3p0-0.9.5.2.jar" />
-      <item itemvalue="JUnit.UserDaoTest.testLogin" />
-      <item itemvalue="JUnit.UserDaoTest" />
       <item itemvalue="Tomcat Server.Tomcat_Cookie&amp;Session" />
       <item itemvalue="Tomcat Server.Tomcat_Servlet" />
       <item itemvalue="Tomcat Server.Tomcat_Download" />
@@ -1167,15 +1181,19 @@
       <item itemvalue="Tomcat Server.TomcatFilter&amp;Listener" />
       <item itemvalue="Tomcat Server.Tomcat_JQuery" />
       <item itemvalue="Tomcat Server.Tomcat_AJAX&amp;JSON" />
-      <item itemvalue="Tomcat Server.01_JQuery实现AJAX.html" />
+      <item itemvalue="Tomcat Server.04_json数据语法_遍历.html" />
+      <item itemvalue="JUnit.jacksonTest.test1" />
+      <item itemvalue="JUnit.jacksonTest.test2" />
+      <item itemvalue="JUnit.jacksonTest.test3" />
+      <item itemvalue="JUnit.jacksonTest.test4" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Tomcat Server.01_JQuery实现AJAX.html" />
-        <item itemvalue="Application.ProxyTest" />
-        <item itemvalue="JUnit.UserDaoTest.testLogin" />
-        <item itemvalue="JUnit.UserDaoTest" />
-        <item itemvalue="JAR Application.c3p0-0.9.5.2.jar" />
+        <item itemvalue="JUnit.jacksonTest.test4" />
+        <item itemvalue="JUnit.jacksonTest.test3" />
+        <item itemvalue="JUnit.jacksonTest.test2" />
+        <item itemvalue="JUnit.jacksonTest.test1" />
+        <item itemvalue="Tomcat Server.04_json数据语法_遍历.html" />
       </list>
     </recent_temporary>
   </component>
@@ -1189,11 +1207,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="运行" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -1383,7 +1396,8 @@
       <workItem from="1596340418268" duration="100000" />
       <workItem from="1596355281863" duration="11719000" />
       <workItem from="1596432831154" duration="1512000" />
-      <workItem from="1596444484254" duration="7225000" />
+      <workItem from="1596444484254" duration="7411000" />
+      <workItem from="1596529996525" duration="8859000" />
     </task>
     <task id="LOCAL-00001" summary="目前总结的所有javaSE到javaEE笔记,还会持续更新">
       <created>1596433806587</created>
@@ -1392,7 +1406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596433806588</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="对AJAX主要知识点进行总结">
+      <created>1596466856747</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596466856747</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1401,7 +1422,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="目前总结的所有javaSE到javaEE笔记,还会持续更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="目前总结的所有javaSE到javaEE笔记,还会持续更新" />
+    <MESSAGE value="对AJAX主要知识点进行总结" />
+    <option name="LAST_COMMIT_MESSAGE" value="对AJAX主要知识点进行总结" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="61" key="#Inspections" timestamp="1593776104982">
@@ -1422,18 +1444,18 @@
     <state x="199" y="46" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.23.1319.745@47.23.1319.745" timestamp="1595587834762" />
     <state x="82" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/48.23.1318.745@48.23.1318.745" timestamp="1596444576796" />
     <state x="308" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/51.23.1315.745@51.23.1315.745" timestamp="1592120774515" />
-    <state x="552" y="205" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596449722696">
+    <state x="552" y="205" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596540242783">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state x="550" y="205" key="#com.intellij.fileTypes.FileTypeChooser/45.23.1321.745@45.23.1321.745" timestamp="1594800933910" />
     <state x="551" y="205" key="#com.intellij.fileTypes.FileTypeChooser/47.23.1319.745@47.23.1319.745" timestamp="1596017651559" />
-    <state x="552" y="205" key="#com.intellij.fileTypes.FileTypeChooser/48.23.1318.745@48.23.1318.745" timestamp="1596449722696" />
+    <state x="552" y="205" key="#com.intellij.fileTypes.FileTypeChooser/48.23.1318.745@48.23.1318.745" timestamp="1596540242783" />
     <state x="554" y="205" key="#com.intellij.fileTypes.FileTypeChooser/51.23.1315.745@51.23.1315.745" timestamp="1591098009358" />
-    <state x="521" y="108" key="#com.intellij.ide.util.MemberChooser" timestamp="1596204039665">
+    <state x="521" y="108" key="#com.intellij.ide.util.MemberChooser" timestamp="1596540143133">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state x="520" y="108" key="#com.intellij.ide.util.MemberChooser/47.23.1319.745@47.23.1319.745" timestamp="1595939073163" />
-    <state x="521" y="108" key="#com.intellij.ide.util.MemberChooser/48.23.1318.745@48.23.1318.745" timestamp="1596204039665" />
+    <state x="521" y="108" key="#com.intellij.ide.util.MemberChooser/48.23.1318.745@48.23.1318.745" timestamp="1596540143133" />
     <state x="523" y="108" key="#com.intellij.ide.util.MemberChooser/51.23.1315.745@51.23.1315.745" timestamp="1590917970577" />
     <state x="429" y="91" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1594802336256">
       <screen x="45" y="23" width="1321" height="745" />
@@ -1463,99 +1485,99 @@
     </state>
     <state x="305" y="61" key="#自动导入/48.23.1318.745@48.23.1318.745" timestamp="1593270157798" />
     <state x="307" y="61" key="#自动导入/51.23.1315.745@51.23.1315.745" timestamp="1589888742393" />
-    <state x="305" y="61" key="#项目结构" timestamp="1596271592530">
+    <state x="305" y="61" key="#项目结构" timestamp="1596534786117">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state x="165" y="65" key="#项目结构/47.23.1319.745@47.23.1319.745" timestamp="1596021001859" />
-    <state x="305" y="61" key="#项目结构/48.23.1318.745@48.23.1318.745" timestamp="1596271592530" />
-    <state x="238" y="23" key="CommitChangelistDialog2" timestamp="1596449790336">
+    <state x="305" y="61" key="#项目结构/48.23.1318.745@48.23.1318.745" timestamp="1596534786117" />
+    <state x="238" y="23" key="CommitChangelistDialog2" timestamp="1596543109297">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
-    <state x="238" y="23" key="CommitChangelistDialog2/48.23.1318.745@48.23.1318.745" timestamp="1596449790336" />
+    <state x="238" y="23" key="CommitChangelistDialog2/48.23.1318.745@48.23.1318.745" timestamp="1596543109297" />
     <state x="148" y="123" width="1118" height="545" key="DiffContextDialog" timestamp="1595235595810">
       <screen x="47" y="23" width="1319" height="745" />
     </state>
     <state x="148" y="123" width="1118" height="545" key="DiffContextDialog/47.23.1319.745@47.23.1319.745" timestamp="1595235595810" />
-    <state width="964" height="157" key="GridCell.Tab.0.bottom" timestamp="1596456944772">
+    <state width="964" height="157" key="GridCell.Tab.0.bottom" timestamp="1596542791979">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.0.bottom/45.23.1321.745@45.23.1321.745" timestamp="1596021448970" />
     <state width="964" height="157" key="GridCell.Tab.0.bottom/47.23.1319.745@47.23.1319.745" timestamp="1596194748221" />
-    <state width="964" height="157" key="GridCell.Tab.0.bottom/48.23.1318.745@48.23.1318.745" timestamp="1596456944772" />
+    <state width="964" height="157" key="GridCell.Tab.0.bottom/48.23.1318.745@48.23.1318.745" timestamp="1596542791979" />
     <state width="1272" height="170" key="GridCell.Tab.0.bottom/51.23.1315.745@51.23.1315.745" timestamp="1592132506150" />
-    <state width="964" height="157" key="GridCell.Tab.0.center" timestamp="1596456944770">
+    <state width="964" height="157" key="GridCell.Tab.0.center" timestamp="1596542791978">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.0.center/45.23.1321.745@45.23.1321.745" timestamp="1596021448969" />
     <state width="964" height="157" key="GridCell.Tab.0.center/47.23.1319.745@47.23.1319.745" timestamp="1596194748219" />
-    <state width="964" height="157" key="GridCell.Tab.0.center/48.23.1318.745@48.23.1318.745" timestamp="1596456944770" />
+    <state width="964" height="157" key="GridCell.Tab.0.center/48.23.1318.745@48.23.1318.745" timestamp="1596542791978" />
     <state width="1272" height="170" key="GridCell.Tab.0.center/51.23.1315.745@51.23.1315.745" timestamp="1592132506148" />
-    <state width="964" height="157" key="GridCell.Tab.0.left" timestamp="1596456944770">
+    <state width="964" height="157" key="GridCell.Tab.0.left" timestamp="1596542791977">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.0.left/45.23.1321.745@45.23.1321.745" timestamp="1596021448969" />
     <state width="964" height="157" key="GridCell.Tab.0.left/47.23.1319.745@47.23.1319.745" timestamp="1596194748219" />
-    <state width="964" height="157" key="GridCell.Tab.0.left/48.23.1318.745@48.23.1318.745" timestamp="1596456944770" />
+    <state width="964" height="157" key="GridCell.Tab.0.left/48.23.1318.745@48.23.1318.745" timestamp="1596542791977" />
     <state width="1272" height="170" key="GridCell.Tab.0.left/51.23.1315.745@51.23.1315.745" timestamp="1592132506148" />
-    <state width="964" height="157" key="GridCell.Tab.0.right" timestamp="1596456944771">
+    <state width="964" height="157" key="GridCell.Tab.0.right" timestamp="1596542791979">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.0.right/45.23.1321.745@45.23.1321.745" timestamp="1596021448970" />
     <state width="964" height="157" key="GridCell.Tab.0.right/47.23.1319.745@47.23.1319.745" timestamp="1596194748220" />
-    <state width="964" height="157" key="GridCell.Tab.0.right/48.23.1318.745@48.23.1318.745" timestamp="1596456944771" />
+    <state width="964" height="157" key="GridCell.Tab.0.right/48.23.1318.745@48.23.1318.745" timestamp="1596542791979" />
     <state width="1272" height="170" key="GridCell.Tab.0.right/51.23.1315.745@51.23.1315.745" timestamp="1592132506149" />
-    <state width="964" height="157" key="GridCell.Tab.1.bottom" timestamp="1596456944532">
+    <state width="964" height="157" key="GridCell.Tab.1.bottom" timestamp="1596542791984">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.1.bottom/45.23.1321.745@45.23.1321.745" timestamp="1596021448972" />
     <state width="964" height="157" key="GridCell.Tab.1.bottom/47.23.1319.745@47.23.1319.745" timestamp="1596194748223" />
-    <state width="964" height="157" key="GridCell.Tab.1.bottom/48.23.1318.745@48.23.1318.745" timestamp="1596456944532" />
+    <state width="964" height="157" key="GridCell.Tab.1.bottom/48.23.1318.745@48.23.1318.745" timestamp="1596542791984" />
     <state width="1272" height="170" key="GridCell.Tab.1.bottom/51.23.1315.745@51.23.1315.745" timestamp="1592132506152" />
-    <state width="964" height="157" key="GridCell.Tab.1.center" timestamp="1596456944531">
+    <state width="964" height="157" key="GridCell.Tab.1.center" timestamp="1596542791983">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.1.center/45.23.1321.745@45.23.1321.745" timestamp="1596021448971" />
     <state width="964" height="157" key="GridCell.Tab.1.center/47.23.1319.745@47.23.1319.745" timestamp="1596194748222" />
-    <state width="964" height="157" key="GridCell.Tab.1.center/48.23.1318.745@48.23.1318.745" timestamp="1596456944531" />
+    <state width="964" height="157" key="GridCell.Tab.1.center/48.23.1318.745@48.23.1318.745" timestamp="1596542791983" />
     <state width="1272" height="170" key="GridCell.Tab.1.center/51.23.1315.745@51.23.1315.745" timestamp="1592132506151" />
-    <state width="964" height="157" key="GridCell.Tab.1.left" timestamp="1596456944530">
+    <state width="964" height="157" key="GridCell.Tab.1.left" timestamp="1596542791982">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.1.left/45.23.1321.745@45.23.1321.745" timestamp="1596021448970" />
     <state width="964" height="157" key="GridCell.Tab.1.left/47.23.1319.745@47.23.1319.745" timestamp="1596194748222" />
-    <state width="964" height="157" key="GridCell.Tab.1.left/48.23.1318.745@48.23.1318.745" timestamp="1596456944530" />
+    <state width="964" height="157" key="GridCell.Tab.1.left/48.23.1318.745@48.23.1318.745" timestamp="1596542791982" />
     <state width="1272" height="170" key="GridCell.Tab.1.left/51.23.1315.745@51.23.1315.745" timestamp="1592132506150" />
-    <state width="964" height="157" key="GridCell.Tab.1.right" timestamp="1596456944531">
+    <state width="964" height="157" key="GridCell.Tab.1.right" timestamp="1596542791983">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.1.right/45.23.1321.745@45.23.1321.745" timestamp="1596021448971" />
     <state width="964" height="157" key="GridCell.Tab.1.right/47.23.1319.745@47.23.1319.745" timestamp="1596194748223" />
-    <state width="964" height="157" key="GridCell.Tab.1.right/48.23.1318.745@48.23.1318.745" timestamp="1596456944531" />
+    <state width="964" height="157" key="GridCell.Tab.1.right/48.23.1318.745@48.23.1318.745" timestamp="1596542791983" />
     <state width="1272" height="170" key="GridCell.Tab.1.right/51.23.1315.745@51.23.1315.745" timestamp="1592132506151" />
-    <state width="964" height="157" key="GridCell.Tab.2.bottom" timestamp="1596456944534">
+    <state width="964" height="157" key="GridCell.Tab.2.bottom" timestamp="1596542791981">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.2.bottom/45.23.1321.745@45.23.1321.745" timestamp="1596021448973" />
     <state width="964" height="157" key="GridCell.Tab.2.bottom/47.23.1319.745@47.23.1319.745" timestamp="1596194748226" />
-    <state width="964" height="157" key="GridCell.Tab.2.bottom/48.23.1318.745@48.23.1318.745" timestamp="1596456944534" />
-    <state width="964" height="157" key="GridCell.Tab.2.center" timestamp="1596456944533">
+    <state width="964" height="157" key="GridCell.Tab.2.bottom/48.23.1318.745@48.23.1318.745" timestamp="1596542791981" />
+    <state width="964" height="157" key="GridCell.Tab.2.center" timestamp="1596542791980">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.2.center/45.23.1321.745@45.23.1321.745" timestamp="1596021448973" />
     <state width="964" height="157" key="GridCell.Tab.2.center/47.23.1319.745@47.23.1319.745" timestamp="1596194748225" />
-    <state width="964" height="157" key="GridCell.Tab.2.center/48.23.1318.745@48.23.1318.745" timestamp="1596456944533" />
-    <state width="964" height="157" key="GridCell.Tab.2.left" timestamp="1596456944532">
+    <state width="964" height="157" key="GridCell.Tab.2.center/48.23.1318.745@48.23.1318.745" timestamp="1596542791980" />
+    <state width="964" height="157" key="GridCell.Tab.2.left" timestamp="1596542791980">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.2.left/45.23.1321.745@45.23.1321.745" timestamp="1596021448972" />
     <state width="964" height="157" key="GridCell.Tab.2.left/47.23.1319.745@47.23.1319.745" timestamp="1596194748224" />
-    <state width="964" height="157" key="GridCell.Tab.2.left/48.23.1318.745@48.23.1318.745" timestamp="1596456944532" />
-    <state width="964" height="157" key="GridCell.Tab.2.right" timestamp="1596456944534">
+    <state width="964" height="157" key="GridCell.Tab.2.left/48.23.1318.745@48.23.1318.745" timestamp="1596542791980" />
+    <state width="964" height="157" key="GridCell.Tab.2.right" timestamp="1596542791981">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state width="964" height="238" key="GridCell.Tab.2.right/45.23.1321.745@45.23.1321.745" timestamp="1596021448973" />
     <state width="964" height="157" key="GridCell.Tab.2.right/47.23.1319.745@47.23.1319.745" timestamp="1596194748225" />
-    <state width="964" height="157" key="GridCell.Tab.2.right/48.23.1318.745@48.23.1318.745" timestamp="1596456944534" />
+    <state width="964" height="157" key="GridCell.Tab.2.right/48.23.1318.745@48.23.1318.745" timestamp="1596542791981" />
     <state width="964" height="391" key="GridCell.Tab.3.bottom" timestamp="1595218838866">
       <screen x="47" y="23" width="1319" height="745" />
     </state>
@@ -1594,10 +1616,10 @@
     <state x="193" y="23" key="SettingsEditor/47.23.1319.745@47.23.1319.745" timestamp="1596021247056" />
     <state x="194" y="23" key="SettingsEditor/48.23.1318.745@48.23.1318.745" timestamp="1596433030023" />
     <state x="197" y="23" key="SettingsEditor/51.23.1315.745@51.23.1315.745" timestamp="1591094938649" />
-    <state x="307" y="124" key="Vcs.Push.Dialog.v2" timestamp="1596433865326">
+    <state x="307" y="124" key="Vcs.Push.Dialog.v2" timestamp="1596466866188">
       <screen x="48" y="23" width="1318" height="745" />
     </state>
-    <state x="307" y="124" key="Vcs.Push.Dialog.v2/48.23.1318.745@48.23.1318.745" timestamp="1596433865326" />
+    <state x="307" y="124" key="Vcs.Push.Dialog.v2/48.23.1318.745@48.23.1318.745" timestamp="1596466866188" />
     <state x="444" y="86" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1592042606448">
       <screen x="51" y="23" width="1315" height="745" />
     </state>
@@ -1606,10 +1628,11 @@
       <screen x="51" y="23" width="1315" height="745" />
     </state>
     <state x="577" y="165" key="com.intellij.database.view.ui.DbObjectDialog/51.23.1315.745@51.23.1315.745" timestamp="1592042560610" />
-    <state x="431" y="296" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595161526076">
-      <screen x="47" y="23" width="1319" height="745" />
+    <state x="432" y="296" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1596535061069">
+      <screen x="48" y="23" width="1318" height="745" />
     </state>
     <state x="431" y="296" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/47.23.1319.745@47.23.1319.745" timestamp="1595161526076" />
+    <state x="432" y="296" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/48.23.1318.745@48.23.1318.745" timestamp="1596535061069" />
     <state x="434" y="296" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/51.23.1315.745@51.23.1315.745" timestamp="1590912190910" />
     <state x="316" y="52" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589892739654">
       <screen x="51" y="23" width="1315" height="745" />

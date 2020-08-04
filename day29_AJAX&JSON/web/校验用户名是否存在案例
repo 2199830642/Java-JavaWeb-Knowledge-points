@@ -1,0 +1,8 @@
+
+    验证用户名是否存在
+    分析：
+        当文本输入框失去焦点后，发送ajax请求，查询数据库是否存在该用户名，如果存在则提示信息
+            1.服务器相应的数据，在客户端响应时，要想当做json格式来使用的话
+                1.$.get/post():最后一个参数指定为json
+                2.在服务器端设置MIME类型
+                response.setContentType("application/json;charset=utf-8");

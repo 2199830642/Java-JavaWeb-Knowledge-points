@@ -1,0 +1,62 @@
+
+    JSON:
+        1.概念：JavaScript Object Notation JavaScript对象标识法
+             var p = {"name":"张三","age":23,"gender":"男"}
+             类似于java里的对象的set方法
+
+             json现在多用于存储和交换文本信息，类似于xml
+             json比xml更轻量级，更小，更快，更易于解析
+
+        2.语法
+            1.基本的规则
+                1.数据在名称值/对中：json数据是由键值对构成的
+                    键用引号引起来，单双都可，也可以不使用引号
+                    值得取值类型：
+                                数字（整数或浮点数）
+                                字符串（在双引号中）
+                                逻辑值
+                                数组（在方括号中）
+                                对象（在花括号中）{"address":{"province":"陕西"...}}
+                                null
+                2.数据由逗号分隔
+                3.花括号保存对象：用{}定义json格式
+                4.方括号保存数据：
+
+            2.获取数据
+                1.json对象.键名
+                2.json对象["键名"]
+                3.数组对象[索引]
+
+        3.json数据和java对象的相互转换
+            json解析器：
+                常见的解析器：Jsonlib，Gson，fastjson，jackson
+
+            1.json转为java对象
+                1.使用步骤：
+                          1.导入jackson相关jar包
+                          2.创建jackson的核心对象 ObjectMapper
+                          3.调用ObjectMapper进行转换
+                            1.转换方法：
+                                readValue(json字符串数据,Class)
+
+            2.java对象转为json
+                1.使用步骤：
+                    1.导入jackson相关jar包
+                    2.创建jackson的核心对象 ObjectMapper
+                    3.调用ObjectMapper进行转换
+                        1.转换方法：
+                            writeValue(参数1,obj)
+                                参数1：
+                                       File：将obj对象转换成json字符串，并保存到指定的文件中
+                                       Writer：将obj对象转换成json字符串，并将json数据填充到字符输出流中
+                                       OutputStream：将obj对象转换成json字符串，并将json数据填充到字节输出流中
+
+                            writeValueAsString(obj);将对象转为json字符串
+
+                        2.注解：
+                            1.@JsonIgnore：排除属性
+                            2.@JsonFormat：属性格式化
+
+                        3.复杂的java对象的转换
+                            1.list:数组
+                            2.Map:和对象格式一致

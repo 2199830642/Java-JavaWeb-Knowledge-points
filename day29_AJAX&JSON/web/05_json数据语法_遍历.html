@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var person = {"name":"张三","age":23,"gender":true};
+
+        var ps = [
+                {"name": "张三", "age": 23, "gender": true},
+                {"name": "李四", "age": 23, "gender": true},
+                {"name": "王五", "age": 23, "gender": true}
+        ];
+        //获取person对象里所有的键和值
+        //for in循环
+       /* for (var key in person){
+            alert(key+":"+person[key]);
+        }*/
+       
+       //获取ps的所有值
+        for (var i = 0;i < ps.length;i++) {
+            for (var key in ps[i]){
+                alert(key+":"+ps[i][key]);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
