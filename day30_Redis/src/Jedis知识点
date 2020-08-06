@@ -1,0 +1,38 @@
+
+    Java客户端：Jedis
+        Jedis：一款java操作redis数据库的工具
+        使用步骤：
+           1.下载Jedis的jar包
+           2.使用
+                    //1.获取连接
+                    Jedis jedis = new Jedis("localhost",6379);
+                    //2.操作
+                    jedis.set("username","zhangsan");
+                    //3.释放资源
+                    jedis.close();
+
+        Jedis操作各种redis的数据结构
+            1) 字符串类型 string
+                set
+                get
+
+            2) 哈希类型 hash
+                hset
+                hget
+
+            3) 列表类型 list
+                lpush/rpush
+                lpop/rpop
+                lrange key start end
+
+            4) 集合类型 set
+                sadd
+                smembers
+
+            5) 有序集合类型 sortedset
+                zadd
+
+        Jedis连接池：JedisPool
+            使用：
+                1.创建JedisPool连接池对象
+                2.调用getResource()获取Jedis的连接
